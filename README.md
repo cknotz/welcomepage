@@ -1,2 +1,2 @@
 # welcomepage
-Takk for at du deltar i undersøkelsen vår!
+Welcome & informed consent page for surveys
