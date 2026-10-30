@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velkommen!</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .text-content p {
+      margin-bottom: 1rem;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    button {
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005ea6;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Velkommen!</h1>
+
+    <div class="text-content">
+    <p>Dette er en <strong>spørreundersøkelse for samfunnsvitenskapelig forskning</strong>. I undersøkelsen vil vi stille deg spørsmål om dine holdninger, dine oppfatninger og din bakgrunn.  Ved å delta i denne undersøkelsen kan du bidra til vitenskapelig forskning og uttrykke din mening.</p>
+    <p>Undersøkelsen er <strong>helt anonym og frivillig</strong>. Vi samler ikke inn informasjon som kan identifisere deg, og du kan avslutte deltakelsen når som helst og av hvilken som helst grunn.</p>
+    <p>Vær obs: <strong>Vi gjennomfører kvalitetssjekker</strong>. Svar som virker veldig raske, tilfeldige eller useriøse kan bli utelatt.</p>
+    <p>Denne undersøkelsen gjennomføres av forskere ved Universitetet i Stavanger (UiS). Hvis du har spørsmål om undersøkelsen eller hvordan informasjonen din beskyttes, kan du kontakte prosjektlederen (<span style="color:#4682B4">carlo.knotz@uis.no</span>).</p>
+ 
+    </div>
+
+    <div class="button-container">
+      <button id="randomRedirectBtn">
+        Start
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const websites = [
+      "https://www.uis.no/nb",
+      "https://www.lu.se/start",
+      "https://www.uni-konstanz.de/en/",
+      "https://www.upf.edu/en/",
+      "https://www.uni-mannheim.de/"
+    ];
+
+    document
+      .getElementById("randomRedirectBtn")
+      .addEventListener("click", () => {
+        const randomIndex = Math.floor(Math.random() * websites.length);
+        window.location.href = websites[randomIndex];
+      });
+  </script>
+
+</body>
+</html>
